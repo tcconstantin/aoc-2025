@@ -8,7 +8,7 @@ import {
   theme,
 } from "./constants.ts";
 
-function createCanvas(input: string[]) {
+function createCanvas(input: CellType[]) {
   const canvas = createCanvasLib(CANVAS_WIDTH, CANVAS_HEIGHT);
   const ctx = canvas.getContext("2d");
 
@@ -35,7 +35,7 @@ function createCanvas(input: string[]) {
   return canvas.toBuffer();
 }
 
-export async function getFrame(input: string[]) {
+export async function getFrame(input: CellType[]) {
   const buffer = createCanvas(input);
   const image = await Image.decode(buffer);
 

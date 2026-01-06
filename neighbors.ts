@@ -24,9 +24,9 @@ function isInRange(opts: IsInRangeOpts): boolean {
   );
 }
 
-type GetNeighborsOpts = IsInRangeOpts;
+export type GetNeighborsOpts = IsInRangeOpts;
 
-type GetNeighborsData = Pick<GetNeighborsOpts, "row" | "column">[];
+export type GetNeighborsData = Pick<GetNeighborsOpts, "row" | "column">[];
 
 export function getNeighbors(opts: GetNeighborsOpts): GetNeighborsData {
   const neighbors: GetNeighborsData = [];
